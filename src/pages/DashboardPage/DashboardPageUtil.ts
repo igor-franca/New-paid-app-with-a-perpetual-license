@@ -10,42 +10,42 @@ import appIconSales from '../../assets/icons/app-icon-sales.svg';
 import appIconPayments from '../../assets/icons/app-icon-payments.svg';
 
 export const appList: AppProps[] = [
-    {
-        image: appIconTransport,
-        name: "A&Co Transport",
-        rating: '4.3',
-        status: 'Published',
-        type: "SaaS",
-        updatedBy: 'by Hanna White',
-        updatedDate: "Feb 14, 2023",
-        updatedResponsible: 'you',
-        version: "1.40",
-        selected: false
-    },
-    {
-        image: appIconSales,
-        name: "A&Co Sales",
-        rating: '4.7',
-        status: 'Pending',
-        type: "OSGI",
-        updatedBy: 'by Hanna White',
-        updatedDate: "Feb 14, 2023",
-        updatedResponsible: 'you',
-        version: "2.28",
-        selected: false
-    },
-    {
-        image: appIconPayments,
-        name: "A&Co Payments",
-        rating: '4.1',
-        status: 'Hidden',
-        type: "OSGI",
-        updatedBy: 'by Hanna White',
-        updatedDate: "Feb 14, 2023",
-        updatedResponsible: 'you',
-        version: "1.0",
-        selected: false
-    },
+    // {
+    //     image: appIconTransport,
+    //     name: "A&Co Transport",
+    //     rating: '4.3',
+    //     status: 'Published',
+    //     type: "SaaS",
+    //     updatedBy: 'by Hanna White',
+    //     updatedDate: "Feb 14, 2023",
+    //     updatedResponsible: 'you',
+    //     version: "1.40",
+    //     selected: false
+    // },
+    // {
+    //     image: appIconSales,
+    //     name: "A&Co Sales",
+    //     rating: '4.7',
+    //     status: 'Pending',
+    //     type: "OSGI",
+    //     updatedBy: 'by Hanna White',
+    //     updatedDate: "Feb 14, 2023",
+    //     updatedResponsible: 'you',
+    //     version: "2.28",
+    //     selected: false
+    // },
+    // {
+    //     image: appIconPayments,
+    //     name: "A&Co Payments",
+    //     rating: '4.1',
+    //     status: 'Hidden',
+    //     type: "OSGI",
+    //     updatedBy: 'by Hanna White',
+    //     updatedDate: "Feb 14, 2023",
+    //     updatedResponsible: 'you',
+    //     version: "1.0",
+    //     selected: false
+    // },
 ];
 
 export const initialDashboardNavigationItems: DashboardListItems[] = [

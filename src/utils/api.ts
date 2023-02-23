@@ -129,6 +129,35 @@ export async function createSpecification({ body }: { body: Object }) {
 	return await response.json();
 }
 
+type Product = {
+	name: {[key: string] : string};
+	externalReferenceCode: string;
+	modifiedDate: string;
+	productId: number;
+	thumbnail: string;
+	workflowStatusInfo: {
+		code: number;
+		label: string;
+		label_i18n: string;
+	}
+}
+
+export async function getAllProducts({
+    catalogId,
+}: {
+    catalogId: number;
+}) {
+    const response = await fetch(
+        `http://localhost:8080/o/headless-commerce-admin-catalog/v1.0/products?filter=catalogId%20eq%20${catalogId}
+        `,
+        {
+            headers,
+            method: 'GET',
+        }
+    );
+    return await response.json() as {items : Product[]};
+}
+
 export async function getCatalogs() {
 	const response = await fetch(
 		'http://localhost:8080/o/headless-commerce-admin-catalog/v1.0/catalogs',
@@ -180,6 +209,16 @@ export async function getProductSKU({
 	return await response.json();
 }
 
+export type ProductSpecifications = {
+	id : number;
+	optionCategoryId : number;
+	priority : number;
+	productId : number; 
+	specificationId : number;
+	specificationKey : string;
+	value : {[key : string] : string}
+}
+
 export async function getProductSpecifications({
 	appProductId,
 }: {
@@ -193,7 +232,7 @@ export async function getProductSpecifications({
 		}
 	);
 
-	return await response.json();
+	return await response.json() as {items : ProductSpecifications[]};
 }
 
 export function patchAppByExternalReferenceCode({

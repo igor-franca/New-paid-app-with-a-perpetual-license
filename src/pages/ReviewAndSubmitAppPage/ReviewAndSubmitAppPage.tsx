@@ -89,11 +89,7 @@ export function ReviewAndSubmitAppPage({
       const newCardInfos: { icon: string; link: string; title: string }[] = [];
 
 			productSpecificationsResponse.items.map(
-				(specification: {
-					specificationKey: string;
-					title: { [key: string]: string };
-					value: { [key: string]: string };
-				}) => {
+				(specification) => {
 					const { specificationKey, value } = specification;
 					const localizedValue = value['en_US'];
 
