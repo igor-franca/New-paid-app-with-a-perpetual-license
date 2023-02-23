@@ -4,7 +4,7 @@ import { Header } from '../../components/Header/Header';
 import { NewAppPageFooterButtons } from '../../components/NewAppPageFooterButtons/NewAppPageFooterButtons';
 import { useAppContext } from '../../manage-app-state/AppManageState';
 import { TYPES } from '../../manage-app-state/actionTypes';
-import { getMasterCatalogId } from '../../utils/util';
+import { getCatalogId } from '../../utils/util';
 import './CreateNewAppPage.scss';
 
 interface CreateNewAppPageProps {
@@ -91,7 +91,7 @@ export function CreateNewAppPage({ onClickContinue }: CreateNewAppPageProps) {
 			<NewAppPageFooterButtons
 				showBackButton={false}
 				onClickContinue={() => {
-					getMasterCatalogId().then((catalogId: number) => {
+					getCatalogId().then((catalogId: number) => {
 						dispatch({
 							payload: {
 								value: catalogId,
