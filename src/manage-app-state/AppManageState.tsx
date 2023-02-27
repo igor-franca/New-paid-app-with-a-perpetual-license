@@ -27,11 +27,11 @@ export interface InitialStateProps {
   appLicense: string;
   appLicensePrice: string;
   appName: string;
-  appNotes: string;
+  appNotes: Specification;
   appStorefrontImages: UploadedFile[];
   appType: Specification;
   appUsageTermsURL: Specification;
-  appVersion: string;
+  appVersion: Specification;
   buildZIPFiles: UploadedFile[];
   catalogId: number;
   dayTrial: string;

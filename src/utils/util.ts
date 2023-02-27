@@ -1,4 +1,6 @@
-import { getCatalogs } from "./api";
+import { TYPES } from "../manage-app-state/actionTypes";
+import { useAppContext } from "../manage-app-state/AppManageState";
+import { createProductSpecification, createSpecification, getCatalogs, updateProductSpecification } from "./api";
 
 export async function getMasterCatalogId() {
 	const response = await getCatalogs();
@@ -14,7 +16,7 @@ export async function submitFile(
 	requestFunction: Function,
 	title: string
 ) {
-	const response = await requestFunction({
+	const response = await requestFunction({	
 		body: {
 			attachment: fileBase64,
 			title: { en_US: title },
